@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/subaochen/git/javabook/src/chap03/src/cn/edu/sdut/softlab/chap03/ac/BankCard.java</file>
-            <file>file:/home/subaochen/git/javabook/src/chap03/src/cn/edu/sdut/softlab/chap03/ac/Client.java</file>
-            <file>file:/home/subaochen/git/javabook/src/chap03/src/cn/edu/sdut/softlab/chap03/acprivate/BankCard.java</file>
-            <file>file:/home/subaochen/git/javabook/src/chap03/src/cn/edu/sdut/softlab/chap03/acprivate/Client.java</file>
+            <file>file:/home/subaochen/git/java-tutorial-examples/chap03/src/cn/edu/sdut/softlab/chap03/acprotected/other/CreditCard.java</file>
+            <file>file:/home/subaochen/git/java-tutorial-examples/chap03/src/cn/edu/sdut/softlab/chap03/acprotected/Client.java</file>
+            <file>file:/home/subaochen/git/java-tutorial-examples/chap03/src/cn/edu/sdut/softlab/chap03/acprotected/other/Test.java</file>
+            <file>file:/home/subaochen/git/java-tutorial-examples/chap03/src/cn/edu/sdut/softlab/chap03/acprotected/BankCard.java</file>
         </group>
     </open-files>
 </project-private>

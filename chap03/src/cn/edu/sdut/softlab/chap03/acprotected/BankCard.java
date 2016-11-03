@@ -1,21 +1,19 @@
 package cn.edu.sdut.softlab.chap03.acprotected;
 
-import cn.edu.sdut.softlab.chap03.acprivate.*;
-
 public class BankCard {
 
-  private String username;
-  private String password;
+  protected String username;
+  protected String password;
 
-  BankCard() {
+  public BankCard() {
     System.out.println("BankCard constructor called");
   }
 
-  void deposit() {
+  protected void deposit() {
     // 存钱
   }
 
-  void withdraw() {
+  protected void withdraw() {
     // 取钱
     System.out.println("钱被取走啦!");
   }

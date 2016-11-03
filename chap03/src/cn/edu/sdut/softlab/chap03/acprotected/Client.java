@@ -1,16 +1,15 @@
 package cn.edu.sdut.softlab.chap03.acprotected;
 
-import cn.edu.sdut.softlab.chap03.acprivate.*;
+import cn.edu.sdut.softlab.chap03.acprotected.other.CreditCard;
 
 public class Client {
 
   public static void main(String[] args) {
-    BankCard card = new BankCard();
-    //card.username = "zhangsan";
-    //card.password = "123456"; // 不可直接修改密码
+    CreditCard card = new CreditCard();
 
-    card.withdraw(); // 取钱畅通无阻！
-    card.deposit(); // 除了爹妈，还有谁往我的卡里存钱呢？！
+
+    card.withdraw();
+    card.deposit(); 
   }
 
 }
