@@ -1,17 +1,15 @@
 package cn.edu.sdut.softlab.chap03.sub33;
 
-import cn.edu.sdut.softlab.chap03.sub322.*;
-
 public class Point {
 
   int x;
   int y;
-  
-  Point() { 
+
+  Point() {
     x = 0;
     y = 0;
   }
-  
+
   Point(int newX, int newY) {
     x = newX;
     y = newY;
