@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package cn.edu.sdut.softlab.essentials.string;
+package cn.edu.sdut.softlab.essentials.number;
 
 /**
  * 本类演示了数字类型包裹类的用法 .
