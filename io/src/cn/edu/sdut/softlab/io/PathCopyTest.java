@@ -29,7 +29,7 @@ public class PathCopyTest {
 
         // 覆盖目的文件
         try {
-            Files.copy(src,dest, REPLACE_EXISTING);//|\longremark{注意观察REPLACE_EXISTING的作用：到testdest目录查看是否存在myfile.txt文件}|
+            Files.copy(src,dest, REPLACE_EXISTING);//|\longremark{注意观察REPLACE\_EXISTING的作用：到testdest目录查看是否存在myfile.txt文件}|
         } catch (IOException e) {
             System.err.println(e);
         }
@@ -57,7 +57,7 @@ public class PathCopyTest {
         src = Paths.get(System.getProperty("user.home") + "/test/passwd");
         dest = Paths.get(System.getProperty("user.home") + "/testdest/passwd");
         try {
-            Files.copy(src, dest, REPLACE_EXISTING, NOFOLLOW_LINKS);// |\longremark{可以尝试去掉REPLACE_EXISTING和NOFOLLOW_LINKS观察执行的结果}|
+            Files.copy(src, dest, REPLACE_EXISTING, NOFOLLOW_LINKS);// |\longremark{可以尝试去掉REPLACE\_EXISTING和NOFOLLOW\_LINKS观察执行的结果}|
         } catch (IOException e) {
             System.err.println(e);
         }
@@ -65,4 +65,4 @@ public class PathCopyTest {
 
     }
 }
-// |\showremarks|
+//|\showremarks|
