@@ -3,7 +3,7 @@ package cn.edu.sdut.softlab;
 /**
  * Created by subaochen on 16-12-23.
  */
-public class GenericBoxExtended<T extends Number> {
+public class GenericBoxExtended<T extends Number> { // |\longremark{T必须是Number类或者Number类的子类}|
     private T value;
 
     public T getValue() {
