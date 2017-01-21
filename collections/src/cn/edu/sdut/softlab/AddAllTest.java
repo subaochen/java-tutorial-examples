@@ -16,6 +16,6 @@ public class AddAllTest {
 
         List<Integer> integers = new ArrayList<Integer>();
         List<Double> doubles = Arrays.asList(2.3,4.5);
-        integers.addAll(doubles);
+        //integers.addAll(doubles);
     }
 }
