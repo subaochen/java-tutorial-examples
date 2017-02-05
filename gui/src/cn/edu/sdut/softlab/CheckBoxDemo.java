@@ -7,9 +7,9 @@ import java.awt.event.*;
  * Created by subaochen on 17-2-5.
  */
 public class CheckBoxDemo {
-    private JCheckBox runningBox;
+    private JCheckBox footballBox;
     private JCheckBox basketBallBox;
-    private JCheckBox pingpangBox;
+    private JCheckBox tennisBox;
     private JCheckBox swimmingBox;
     private JPanel mainPanel;
     private JLabel sportLabel;
@@ -24,18 +24,76 @@ public class CheckBoxDemo {
 
     public CheckBoxDemo() {
 
-        runningBox.addActionListener(new ActionListener() {
+        footballBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "选择了跑步:" + runningBox.isSelected());
+                JOptionPane.showMessageDialog(null, "选择了跑步:" + footballBox.isSelected());
             }
         });
-        runningBox.addMouseListener(new MouseAdapter() {
+        footballBox.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent mouseEvent) {
                 super.mouseEntered(mouseEvent);
                 sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/football.png")));
             }
+            @Override
+            public void mouseExited(MouseEvent mouseEvent) {
+                super.mouseExited(mouseEvent);
+                sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/duke.gif")));
+            }
+        });
+        swimmingBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JOptionPane.showMessageDialog(null, "选择了跑步:" + swimmingBox.isSelected());
+            }
+        });
+        swimmingBox.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent mouseEvent) {
+                super.mouseEntered(mouseEvent);
+                sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/swimming.png")));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent mouseEvent) {
+                super.mouseExited(mouseEvent);
+                sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/duke.gif")));
+            }
+        });
+        tennisBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JOptionPane.showMessageDialog(null, "选择了跑步:" + tennisBox.isSelected());
+
+            }
+        });
+        tennisBox.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent mouseEvent) {
+                super.mouseEntered(mouseEvent);
+                sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/tennis.png")));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent mouseEvent) {
+                super.mouseExited(mouseEvent);
+                sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/duke.gif")));
+            }
+        });
+        basketBallBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JOptionPane.showMessageDialog(null, "选择了跑步:" + basketBallBox.isSelected());
+            }
+        });
+        basketBallBox.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent mouseEvent) {
+                super.mouseEntered(mouseEvent);
+                sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/baseketball.png")));
+            }
+
             @Override
             public void mouseExited(MouseEvent mouseEvent) {
                 super.mouseExited(mouseEvent);
