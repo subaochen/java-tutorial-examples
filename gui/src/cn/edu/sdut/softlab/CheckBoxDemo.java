@@ -100,5 +100,10 @@ public class CheckBoxDemo {
                 sportLabel.setIcon(new ImageIcon(CheckBoxDemo.class.getResource("/images/duke.gif")));
             }
         });
+        footballBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent itemEvent) {
+            }
+        });
     }
 }
