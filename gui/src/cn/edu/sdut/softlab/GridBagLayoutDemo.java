@@ -12,6 +12,8 @@ public class GridBagLayoutDemo {
     private JButton anotherButtonButton;
     private JButton aLongNameButtonButton;
     private JButton lastButtonButton;
+    private JButton buttonCButton;
+    private JButton buttonDButton;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("GridBagLayoutDemo");

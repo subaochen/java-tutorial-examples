@@ -27,7 +27,7 @@ public class CheckBoxDemo {
         footballBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "选择了跑步:" + footballBox.isSelected());
+                JOptionPane.showMessageDialog(null, "选择了足球:" + footballBox.isSelected());
             }
         });
         footballBox.addMouseListener(new MouseAdapter() {
@@ -45,7 +45,7 @@ public class CheckBoxDemo {
         swimmingBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "选择了跑步:" + swimmingBox.isSelected());
+                JOptionPane.showMessageDialog(null, "选择了游泳:" + swimmingBox.isSelected());
             }
         });
         swimmingBox.addMouseListener(new MouseAdapter() {
@@ -64,7 +64,7 @@ public class CheckBoxDemo {
         tennisBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "选择了跑步:" + tennisBox.isSelected());
+                JOptionPane.showMessageDialog(null, "选择了网球:" + tennisBox.isSelected());
 
             }
         });
@@ -84,7 +84,7 @@ public class CheckBoxDemo {
         basketBallBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(null, "选择了跑步:" + basketBallBox.isSelected());
+                JOptionPane.showMessageDialog(null, "选择了篮球:" + basketBallBox.isSelected());
             }
         });
         basketBallBox.addMouseListener(new MouseAdapter() {
