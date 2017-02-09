@@ -1,5 +1,8 @@
 package cn.edu.sdut.softlab;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -79,15 +82,14 @@ public class Caculator implements ActionListener {
                 expression.append(cmd);
                 break;
             case "=":
-                expression.append(cmd);
                 // 计算结果
-                expression.append(caculate(expression));
+                expression.append("=" + caculate(expression));
                 break;
             case "C":
                 expression = new StringBuilder();
                 break;
             case "x^2":
-                expression.append("^");
+                expression.append("^2");
                 break;
             case "del":
                 expression.deleteCharAt(expression.length() - 1);
@@ -98,7 +100,16 @@ public class Caculator implements ActionListener {
     }
 
     private String caculate(StringBuilder expression) {
-        return null;
+        String result = "";
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
+        try {
+            System.out.println("expression=" + expression);
+            result = engine.eval(expression.toString()).toString();
+        } catch (ScriptException e) {
+            e.printStackTrace();
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
