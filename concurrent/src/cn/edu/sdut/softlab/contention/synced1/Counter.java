@@ -1,4 +1,4 @@
-package cn.edu.sdut.softlab.contention;
+package cn.edu.sdut.softlab.contention.synced1;
 
 import java.util.Random;
 
@@ -8,7 +8,7 @@ import java.util.Random;
 public class Counter {
     private int c = 0;
 
-    public synchronized void increment() {
+    public synchronized void increment() { // |\longremark{比较cn.edu.sdut.softlab.contention包中的Counter类，增加了synchronized修饰符是唯一的变化}|
         System.out.println("#increment()");
         sleep();
         int temp = c;
@@ -22,7 +22,7 @@ public class Counter {
         System.out.println("#increment() - after store c to new value:" + temp);
     }
 
-    public synchronized void decrement() {
+    public synchronized void decrement() { // |\longremark{同样的，decrement也需要使用synchronized修饰，这是decrement方法唯一的变化}|
         System.out.println("*decrement()");
         sleep();
         int temp = c;
@@ -48,4 +48,4 @@ public class Counter {
             return;
         }
     }
-}
+} // |\showremarks|
