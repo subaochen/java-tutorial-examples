@@ -4,49 +4,48 @@ import java.util.Random;
 
 /**
  * Created by subaochen on 17-2-13.
- * 本例来自https://docs.oracle.com/javase/tutorial/essential/concurrency/interfere.html
  */
 public class Counter {
     private int c = 0;
-    private static final int T1 = 500;
-    private static final int T2 = 200;
 
-    public void increment() {
+    public synchronized void increment() {
+        System.out.println("in increment()");
+        sleep();
         int temp = c;
-        try {
-            Thread.sleep(T1);
-        } catch (InterruptedException e) {
-            System.out.println("increament is interrupted before temp++, c = " + c);
-        }
+        System.out.println("in increment() - after get value from c to temp:" + c);
+        sleep();
         temp++;
-        try {
-            Thread.sleep(T2);
-        } catch (InterruptedException e) {
-            System.out.println("increment is interrupted after temp++, c = " + c);
-            //return
-        }
+        System.out.println("in increment() - after temp++:" + temp);
+        sleep();
         c = temp;
+        sleep();
+        System.out.println("in increment() - after store c to new value:" + temp);
     }
 
-    public void decrement() {
+    public  synchronized void decrement() {
+        System.out.println("in decrement()");
+        sleep();
         int temp = c;
-        try {
-            Thread.sleep(T1);
-        } catch (InterruptedException e) {
-            System.out.println("decreament is interrupted before temp--, c = " + c);
-        }
+        System.out.println("in decrement() - after get value from c to temp:" + temp);
+        sleep();
         temp--;
-        try {
-            Thread.sleep(T2);
-        } catch (InterruptedException e) {
-            System.out.println("decreament is interrupted after temp--, c = " + c);
-            //return;
-        }
-
+        System.out.println("in decrement() - after temp--:" + temp);
+        sleep();
         c = temp;
+        sleep();
+        System.out.println("in decrement() - after store c to new value:" + temp);
     }
 
     public int value() {
         return c;
+    }
+
+    private void sleep() {
+        Random random = new Random();
+        try {
+            Thread.sleep(random.nextInt(1000));
+        } catch (InterruptedException e) {
+            return;
+        }
     }
 }

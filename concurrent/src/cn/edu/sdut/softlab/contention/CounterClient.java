@@ -6,13 +6,13 @@ import java.util.Random;
  * Created by subaochen on 17-2-13.
  */
 public class CounterClient {
-    private static Counter counter = new Counter();
+
     public static void main(String[] args) {
+        final Counter counter = new Counter();
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
                 counter.increment();
-                System.out.println("t1,counter value=" + counter.value());
             }
         });
 
@@ -20,13 +20,18 @@ public class CounterClient {
             @Override
             public void run() {
                 counter.decrement();
-                System.out.println("t2,counter value=" + counter.value());
             }
         });
 
         t1.start();
         t2.start();
+        try {
+            t1.join(); // main线程要等待t1执行完毕才能继续执行
+            t2.join(); // main线程要等待t2执行完毕才能继续执行
+        } catch (InterruptedException e) {
+            // ignore
+        }
 
-
+        System.out.println("finally, c is " + counter.value());
     }
 }
