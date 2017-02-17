@@ -10,9 +10,9 @@ import java.net.URL;
 public class URLReader {
     public static void main(String[] args) throws Exception {
 
-        URL baidu = new URL("http://www.baidu.com/");
+        URL url = new URL("https://raw.githubusercontent.com/subaochen/java-tutorial-examples/master/network/sample/hello.txt");
         BufferedReader in = new BufferedReader(
-                new InputStreamReader(baidu.openStream()));
+                new InputStreamReader(url.openStream()));
 
         String inputLine;
         while ((inputLine = in.readLine()) != null)
