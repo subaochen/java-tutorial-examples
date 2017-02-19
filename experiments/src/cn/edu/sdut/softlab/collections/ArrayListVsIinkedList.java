@@ -1,4 +1,4 @@
-package cn.edu.sdut.softlab;
+package cn.edu.sdut.softlab.collections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
