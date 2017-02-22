@@ -15,15 +15,15 @@ public class ServerDemo {
         try(
                 ServerSocket serverSocket = new ServerSocket(2000);
                 Socket clientSocket = serverSocket.accept();
-                PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
+                //PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
                 FileOutputStream fis = new FileOutputStream("out.txt");
                 Scanner in = new Scanner(clientSocket.getInputStream());
         ) {
             String inputLine;
             while((inputLine = in.nextLine()) != null) {
+                System.out.println("接收到的数据：" + inputLine);
                 // 写入文件
-
-                out.println("OK");
+                fis.write(inputLine.getBytes());
             }
 
         } catch (IOException e) {
